@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Deficit Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.3/html2canvas.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Input form for user data -->
+        <form id="user-data-form">
+            <label for="height">Enter Height (cm):</label>
+            <input type="number" id="height" name="height" required>
+
+            <label for="weight">Enter Weight (kg):</label>
+            <input type="number" id="weight" name="weight" required>
+
+            <label for="age">Enter Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="sex">Select Sex:</label>
+            <select id="sex" name="sex" required>
+                <option value="">Select...</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <button type="button" id="calculate-btn">Calculate</button>
+        </form>
+
+        <!-- Results display -->
+        <div id="results">
+            <h3>Results:</h3>
+            <p>BMI: <span id="bmi-result"></span></p>
+            <p>Calories to Maintain Weight: <span id="maintain-calories-result"></span></p>
+            <p>Calories for Deficit: <span id="deficit-calories-result"></span></p>
+        </div>
+
+        <!-- Recipes section with tabs -->
+        <div id="recipes">
+            <div class="tabs">
+                <button class="tablink" onclick="openDay(event, 'Day1')">Day 1</button>
+                <button class="tablink" onclick="openDay(event, 'Day2')">Day 2</button>
+                <button class="tablink" onclick="openDay(event, 'Day3')">Day 3</button>
+                <button class="tablink" onclick="openDay(event, 'Day4')">Day 4</button>
+                <button class="tablink" onclick="openDay(event, 'Day5')">Day 5</button>
+                <button class="tablink" onclick="openDay(event, 'Day6')">Day 6</button>
+                <button class="tablink" onclick="openDay(event, 'Day7')">Day 7</button>
+            </div>
+            <div id="Day1" class="tabcontent">
+                <!-- Recipes for Day 1 will be loaded here -->
+            </div>
+            <div id="Day2" class="tabcontent">
+                <!-- Recipes for Day 2 will be loaded here -->
+            </div>
+            <div id="Day3" class="tabcontent">
+                <!-- Recipes for Day 3 will be loaded here -->
+            </div>
+            <div id="Day4" class="tabcontent">
+                <!-- Recipes for Day 4 will be loaded here -->
+            </div>
+            <div id="Day5" class="tabcontent">
+                <!-- Recipes for Day 5 will be loaded here -->
+            </div>
+            <div id="Day6" class="tabcontent">
+                <!-- Recipes for Day 6 will be loaded here -->
+            </div>
+            <div id="Day7" class="tabcontent">
+                <!-- Recipes for Day 7 will be loaded here -->
+            </div>
+        </div>
+
+        <!-- Download menu button -->
+        <button type="button" id="download-menu-btn">Download Menu</button>
+    </div>
+</body>
+</html>
