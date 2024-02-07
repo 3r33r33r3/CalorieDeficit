@@ -9,6 +9,7 @@
 
 /* Container for the entire app */
 .container {
+    font-family: Arial, Helvetica, sans-serif;
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
